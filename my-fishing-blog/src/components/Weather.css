@@ -1,0 +1,64 @@
+.weater-box{
+    width: 33%;
+    /* border: 1px solid red; */
+    text-align: center;
+    
+}
+.weather-title{
+    text-decoration: underline;
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 400;
+    font-size: 1.8em;
+}
+.weather{
+    padding: 2% 3%;
+    align-items: center;
+    background-image: url(../photos/weather-app3.jpg);
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.input-btn{
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    margin-top: 30px; 
+}
+.input-city{
+    border: 2px solid black;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-right: 0;
+    padding-left: 10px; 
+}
+.btn-city{
+    background-color: black;
+    border: 0;
+    padding: 5px 10px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    color: white;
+    font-weight: 600; 
+}
+.city-name{
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: black;
+    font-weight: 500;
+}
+.weather-desc{
+    margin-top: 150px;
+    color: white;
+    margin-bottom: 20px;
+}
+.weather-wind{
+    margin-bottom: 20px;
+    color: white;
+}
+.weather-temp, .weather-hum{
+    color: white;
+}
