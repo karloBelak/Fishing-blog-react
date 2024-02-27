@@ -3,6 +3,7 @@ import { useState } from 'react';
 import CardGalery from '../components/CardGalery.js'
 import { useParams } from 'react-router-dom';
 import StoryData from '../datas/storysData.js'
+import { motion, AnimatePresence } from "framer-motion";
 
 
 function Card() {
@@ -41,7 +42,19 @@ function Card() {
               {showAnswer[question.id] ? '-' : '+'}
             </button>
           </div>
-          {showAnswer[question.id] && <p className='answer'>{question.info}</p>}
+          <AnimatePresence>
+          {showAnswer[question.id] && (       
+                <motion.p
+              className="answer"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {question.info}
+            </motion.p>
+          )} 
+           </AnimatePresence>
         </div>
         ))}
         {/* <p className='card-story'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

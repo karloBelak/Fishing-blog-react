@@ -6,6 +6,7 @@ import photo3 from '../photos-card/kanal-pastrva.jpg'
 import photo4 from '../photos-card/kanal-pastrva1.jpg'
 import photo5 from '../photos-card/kanal-zima.jpg'
 import { useState } from 'react'
+import {motion, AnimatePresence} from 'framer-motion'
 
     const images = [photo1, photo2, photo3, photo4, photo5]
 
@@ -29,10 +30,12 @@ function openModal(index){
                 })
             }
         </div>
-        {modal && <div className='modal'>
+        <AnimatePresence>
+            {modal && <motion.div className='modal'>
                     <img  src={images[imgNum]} alt='im' className='modal-img'/>
-                    <button className='btn-close-modal' onClick={() => setModal(false)}>❌</button>
-                </div>}
+                    <button className='btn-close-modal' onClick={() => setModal(false)}>❌</button>                  
+                    </motion.div> }
+        </AnimatePresence>
     </div>
   )
 }
