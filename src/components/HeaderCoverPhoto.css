@@ -1,0 +1,15 @@
+.background{
+    position: relative;
+}
+.background-photo{
+    width: 100%;
+}
+.background-quote{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    color: white;
+    font-style: italic;
+    font-size: 1.1em;
+    text-shadow: 3px 3px 2px black;
+}
